@@ -19,7 +19,7 @@ npm install dnd-dice-roll
 Import the package in your project:
 
 ```javascript
-const rollDice = require('dnd-dice-roll');
+import rollDice from 'dnd-dice-roll';
 ```
 
 ### Basic Rolls

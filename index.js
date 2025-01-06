@@ -1,4 +1,4 @@
-function rollDice(numRolls = 1, numSides, modifier = 0) {
+export function rollDice(numRolls = 1, numSides, modifier = 0) {
     // Validate inputs
     if (!Number.isInteger(numRolls) || numRolls <= 0) {
         throw new Error("Number of rolls must be a positive integer.");
@@ -71,4 +71,4 @@ rollDice.tenSides = (numRolls = 1, modifier = 0) => rollDice(numRolls, 10, modif
 rollDice.twentySides = (numRolls = 1, modifier = 0) => rollDice(numRolls, 20, modifier);
 rollDice.hundredSides = (numRolls = 1, modifier = 0) => rollDice(numRolls, 100, modifier);
 
-module.exports = rollDice;
+export default rollDice;
