@@ -1,0 +1,11 @@
+{
+  "name": "dnd-dice-roll",
+  "version": "1.0.0",
+  "description": "A dnd dice rolling package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "codeofmickey",
+  "license": "ISC"
+}
