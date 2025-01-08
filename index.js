@@ -21,16 +21,19 @@ export function rollDice(numRolls = 1, numSides, modifier = 0) {
 
     // Chainable object with helper methods
     const methods = {
+        roll() {
+            return total; // Explicit method for clarity
+        },
         noZero() {
             total = Math.max(1, total); // Ensure minimum 1
-            return total;
+            return this; // Return the chainable object
         },
         minValue(min) {
             if (!Number.isInteger(min) || min < 1) {
                 throw new Error("Minimum value must be an integer greater than or equal to 1.");
             }
             total = Math.max(min, total); // Enforce minimum
-            return total;
+            return this;
         },
         average() {
             return (total / numRolls).toFixed(2); // Return average as a fixed-point number
@@ -38,12 +41,12 @@ export function rollDice(numRolls = 1, numSides, modifier = 0) {
         inspiration() {
             const inspirationRoll = Math.floor(Math.random() * numSides) + 1;
             total = Math.max(total, inspirationRoll); // Use the higher of the two rolls
-            return total;
+            return this;
         },
         disspiration() {
             const disspirationRoll = Math.floor(Math.random() * numSides) + 1;
             total = Math.min(total, disspirationRoll); // Use the lower of the two rolls
-            return total;
+            return this;
         },
     };
 

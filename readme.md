@@ -42,6 +42,15 @@ console.log(rollDice.numberOfRolls(3).sixSides(2));
 
 ### Helper Methods
 
+#### `roll()`
+Explicitly returns the total roll value.
+
+```javascript
+const roll = rollDice(1, 20);
+console.log(roll.roll());
+// Example output: 12
+```
+
 #### `inspiration()`
 Simulates rolling with advantage by rolling an additional die and taking the higher result.
 
@@ -142,3 +151,10 @@ try {
 ## License
 
 This project is licensed under the MIT License.
+
+---
+
+## Keywords
+
+dice roll, D&D dice, tabletop RPG, dice roller, d20, dice rolling, Dungeons and Dragons, RPG utilities, advantage rolling, npm dice package
+
