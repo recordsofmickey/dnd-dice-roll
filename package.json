@@ -1,6 +1,6 @@
 {
   "name": "dnd-dice-roll",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A dnd dice rolling package",
   "homepage": "https://github.com/recordsofmickey/dnd-dice-roll",
   "main": "index.js",
