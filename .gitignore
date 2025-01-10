@@ -1,4 +1,0 @@
-*.tgz
-.npmignore
-.gitignore
-/node_modules/
