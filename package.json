@@ -1,13 +1,24 @@
 {
   "name": "dnd-dice-roll",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A dnd dice rolling package",
   "homepage": "https://github.com/recordsofmickey/dnd-dice-roll",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   },
   "author": "codeofmickey",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
 }

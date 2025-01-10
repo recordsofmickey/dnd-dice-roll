@@ -48,6 +48,13 @@ export function rollDice(numRolls = 1, numSides, modifier = 0) {
             total = Math.min(total, disspirationRoll); // Use the lower of the two rolls
             return this;
         },
+        abilityScore() {
+            const rolls = [];
+            for (let i = 0; i < 4; i++) {
+                rolls.push(Math.floor(Math.random() * numSides) + 1);
+            }
+            return rolls.sort((a, b) => b - a).slice(0, 3).reduce((sum, roll) => sum + roll, 0);
+        }
     };
 
     return Object.assign(() => total, methods);
