@@ -1,10 +1,20 @@
 {
   "name": "dnd-dice-roll",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A dnd dice rolling package",
   "homepage": "https://github.com/recordsofmickey/dnd-dice-roll",
   "main": "index.js",
   "type": "module",
+  "keywords": [
+    "dice roll",
+    "D&D dice",
+    "tabletop RPG",
+    "dice roller",
+    "d20",
+    "dice rolling",
+    "Dungeons and Dragons",
+    "RPG utilities"
+  ],
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },

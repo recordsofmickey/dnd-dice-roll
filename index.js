@@ -69,7 +69,9 @@ rollDice.numberOfRolls = (x) => {
     return {
         fourSides: (modifier = 0) => rollDice(x, 4, modifier),
         sixSides: (modifier = 0) => rollDice(x, 6, modifier),
+        eightSides: (modifier = 0) => rollDice(x, 8, modifier),
         tenSides: (modifier = 0) => rollDice(x, 10, modifier),
+        twelveSides: (modifier = 0) => rollDice(x, 12, modifier),
         twentySides: (modifier = 0) => rollDice(x, 20, modifier),
         hundredSides: (modifier = 0) => rollDice(x, 100, modifier),
     };
