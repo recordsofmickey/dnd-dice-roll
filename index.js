@@ -38,14 +38,14 @@ export function rollDice(numRolls = 1, numSides, modifier = 0) {
         average() {
             return (total / numRolls).toFixed(2); // Return average as a fixed-point number
         },
-        inspiration() {
-            const inspirationRoll = Math.floor(Math.random() * numSides) + 1;
-            total = Math.max(total, inspirationRoll); // Use the higher of the two rolls
+        advantage() {
+            const advantageRoll = Math.floor(Math.random() * numSides) + 1;
+            total = Math.max(total, advantageRoll); // Use the higher of the two rolls
             return this;
         },
-        disspiration() {
-            const disspirationRoll = Math.floor(Math.random() * numSides) + 1;
-            total = Math.min(total, disspirationRoll); // Use the lower of the two rolls
+        disadvantage() {
+            const disadvantageRoll = Math.floor(Math.random() * numSides) + 1;
+            total = Math.min(total, disadvantageRoll); // Use the lower of the two rolls
             return this;
         },
         abilityScore() {
@@ -53,7 +53,14 @@ export function rollDice(numRolls = 1, numSides, modifier = 0) {
             for (let i = 0; i < 4; i++) {
                 rolls.push(Math.floor(Math.random() * numSides) + 1);
             }
-            return rolls.sort((a, b) => b - a).slice(0, 3).reduce((sum, roll) => sum + roll, 0);
+            const returnObject = {
+                roll1: rolls[0],
+                roll2: rolls[1],
+                roll3: rolls[2],
+                roll4: rolls[3],
+                total: rolls.sort((a, b) => b - a).slice(0, 3).reduce((sum, roll) => sum + roll, 0)
+            }
+            return returnObject;
         }
     };
 

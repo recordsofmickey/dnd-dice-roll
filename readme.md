@@ -4,6 +4,14 @@ A lightweight and versatile dice-rolling package for D&D and other tabletop RPGs
 
 ---
 
+## Version 1.2.0
+
+- Replaced `inspiration()` and `disspiration()` with `advantage()` and `disadvantage()` methods.
+- added `abilityScore()` method.
+- added `hundredSides()` method.
+
+---
+
 ## Installation
 
 Install the package via npm:
@@ -51,19 +59,19 @@ console.log(roll.roll());
 // Example output: 12
 ```
 
-#### `inspiration()`
+#### `advantage()`
 Simulates rolling with advantage by rolling an additional die and taking the higher result.
 
 ```javascript
-console.log(rollDice.twentySides().inspiration());
+console.log(rollDice.twentySides().advantage());
 // Example output: 18 (higher of the two rolls)
 ```
 
-#### `disspiration()`
+#### `disadvantage()`
 Simulates rolling with disadvantage by rolling an additional die and taking the lower result.
 
 ```javascript
-console.log(rollDice.twentySides().disspiration());
+console.log(rollDice.twentySides().disadvantage());
 // Example output: 10 (lower of the two rolls)
 ```
 
@@ -91,6 +99,13 @@ console.log(rollDice.tenSides(-5).minValue(10));
 // Example output: 10
 ```
 
+#### `abilityScore()`
+Returns an object with the results of rolling 4d6, discarding the lowest roll, and summing the remaining three.
+
+```javascript
+console.log(rollDice.abilityScore());
+// Example output: { roll1: 4, roll2: 6, roll3: 3, roll4: 2, total: 15 }
+```
 ---
 
 ### Predefined Dice Rollers
